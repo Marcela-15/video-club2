@@ -12,7 +12,7 @@ COPY . .
 
 EXPOSE 80
 
-CMD node server.js
+CMD node app.js
 
 # Add a comment to inform the user
 # that the server.js file is required
