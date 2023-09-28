@@ -1,5 +1,5 @@
 FROM node
-WORKDIR  /APP
+WORKDIR  /app
 COPY . .
 RUN npm install
 EXPOSE 80
