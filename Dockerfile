@@ -1,20 +1,6 @@
-ARG NODE_VERSION=14
-
-FROM node:${NODE_VERSION}
-
-WORKDIR /app
-
-COPY package.json package-lock.json ./
-
-RUN npm install
-
+FROM node
+WORKDIR  /APP
 COPY . .
-
+RUN npm install
 EXPOSE 80
-
-CMD node app.js
-
-# Add a comment to inform the user
-# that the server.js file is required
-# and should be present in the current directory
-# during the build process.
+CMD PORT=80 npm start
